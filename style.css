@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Audiowide", sans-serif;
+}
+
+:root {
+  --color-bg: #0f0022;
+  --color-header: #1a0035;
+  --color-accent: #00ff99;
+  --color-secondary: #ff00ff;
+  --color-tertiary: #00cfff;
+  --color-text: #f0f0f0;
+  --color-muted: #9b88b0;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0022 0%, #1a0035 50%, #0d001a 100%);
+  background-attachment: fixed;
+  color: var(--color-text);
+  font-family: "Roboto", sans-serif;
+}
+
+.carrito-icon {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: text-shadow 0.3s;
+  z-index: 999;
+}
+
+.carrito-icon:hover {
+  text-shadow:
+    0 0 8px var(--color-accent),
+    0 0 20px var(--color-accent);
+}
+
+.carrito-count {
+  font-family: "Audiowide", sans-serif;
+  font-size: 1rem;
+  color: var(--color-accent);
+}
+
+header {
+  border: 2px solid red;
+  margin-bottom: 30px;
+  padding: 20px 10px;
+  background: linear-gradient(90deg, #1a0035, #2d0050);
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-secondary);
+  box-shadow: 0 0 20px var(--color-secondary);
+}
+
+header h1 {
+  margin: 0.5rem 1rem;
+  position: relative;
+  font-size: 3rem;
+  color: var(--color-accent);
+  text-shadow: 0 0 10px var(--color-accent);
+  animation: colorShift 10s infinite;
+}
+
+header nav {
+  border: 2px solid white;
+  text-align: center;
+}
+
+header ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 1.5rem 2.3rem;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition:
+    color 0.3s,
+    text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--color-accent);
+  text-shadow:
+    0 0 8px var(--color-accent),
+    0 0 20px var(--color-accent);
+}
+
+main {
+  border: 2px solid blue;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  background: linear-gradient(160deg, #1a0035, #2d0050);
+  border: 1px solid var(--color-secondary);
+  border-radius: 12px;
+  width: 220px;
+  overflow: hidden;
+  box-shadow: 0 0 10px var(--color-secondary);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 20px var(--color-secondary),
+    0 0 40px var(--color-secondary);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-info {
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-categoria {
+  font-size: 0.75rem;
+  color: var(--color-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-info h3 {
+  font-family: "Audiowide", sans-serif;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.card-precio {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  text-shadow: 0 0 6px var(--color-accent);
+}
+
+.video-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.video-container iframe {
+  width: 400px;
+  height: 225px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .video-container iframe {
+    width: 100%;
+    height: 220px;
+  }
+}
+
+.reseñas-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.reseña {
+  background: linear-gradient(160deg, #1a0035, #2d0050);
+  border: 1px solid var(--color-tertiary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  box-shadow: 0 0 10px var(--color-tertiary);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.reseña:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 20px var(--color-tertiary),
+    0 0 40px var(--color-tertiary);
+}
+
+.reseña-texto {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.reseña-autor {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  text-shadow: 0 0 6px var(--color-accent);
+}
+
+.reseña-estrellas {
+  font-size: 1rem;
+}
+
+.contacto-subtitulo {
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-family: "Audiowide", sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+}
+
+.form-group input,
+.form-group textarea {
+  background: #1a0035;
+  border: 1px solid var(--color-secondary);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: var(--color-text);
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent);
+}
+
+.form-btn {
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Audiowide", sans-serif;
+  font-size: 0.9rem;
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
+}
+
+.form-btn:hover {
+  background: var(--color-accent);
+  color: #0f0022;
+  box-shadow: 0 0 12px var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .formulario {
+    padding: 0 1rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reseñas-container {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  header ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99;
+  }
+  25% {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+  }
+  50% {
+    color: #00cfff;
+    text-shadow: 0 0 10px #00cfff;
+  }
+  75% {
+    color: #ff6600;
+    text-shadow: 0 0 10px #ff6600;
+  }
+  100% {
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99;
+  }
+}
+
+footer {
+  padding: 3rem 2rem 1.5rem;
+  text-align: center;
+}
+
+.footer-social h4 {
+  font-family: "Audiowide", sans-serif;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.footer-social ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-social ul li a {
+  color: var(--color-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-social ul li a:hover {
+  color: var(--color-accent);
+}
+
+.footer-copy {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  padding-top: 1.5rem;
+}
