@@ -21,3 +21,4 @@ Tienda online de videojuegos con estética Synthwave/Retrowave.
 ## Deploy
 
 El sitio está publicado en GitHub Pages:
+[Ver sitio](https://15mig15.github.io/noob-tienda/)
