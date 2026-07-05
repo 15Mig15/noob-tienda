@@ -27,7 +27,7 @@
       <section id="inicio">
   <h2>Esto es nOOb</h2>
   <p>Los mejores juegos al mejor precio.</p>
-  <section id="inicio">
+      </section>
     
 
     <div class="video-item">
@@ -48,80 +48,12 @@
   <section id="productos">
         <h2>Productos</h2>
         <div class="cards-container"></div>
-
-      <div class="cards-container">
-        <div class="card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg"alt="Elden Ring"/>
-          <div class="card-info">
-            <span class="card-categoria">RPG</span>
-            <h3>Elden Ring</h3>
-            <p class="card-precio">30.000 ARS</p>
-            <button class="card-btn">Agregar al carrito</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg"alt="Cyberpunk 2077"/>
-          <div class="card-info">
-            <span class="card-categoria">RPG</span>
-            <h3>Cyberpunk 2077</h3>
-            <p class="card-precio">15.000 ARS</p>
-            <button class="card-btn">Agregar al carrito</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg"alt="Fallout 4"/>
-          <div class="card-info">
-            <span class="card-categoria">RPG</span>
-            <h3>Fallout 4</h3>
-            <p class="card-precio">5.000 ARS</p>
-            <button class="card-btn">Agregar al carrito</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2183900/header.jpg"alt="Space Marine 2"/>
-          <div class="card-info">
-            <span class="card-categoria">Acción</span>
-            <h3>Space Marine 2</h3>
-            <p class="card-precio">10.000 ARS</p>
-            <button class="card-btn">Agregar al carrito</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/391220/header.jpg" alt="Rise of the Tomb Raider">
-          <div class="card-info">
-           <span class="card-categoria">Aventura</span>
-           <h3>Rise of the Tomb Raider</h3>
-           <p class="card-precio">4.000 ARS</p>
-          <button class="card-btn">Agregar al carrito</button>
-         </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1151640/header.jpg"alt="Horizon Zero Dawn"/>
-          <div class="card-info">
-            <span class="card-categoria">Acción</span>
-            <h3>Horizon Zero Dawn</h3>
-            <p class="card-precio">20.000 ARS</p>
-            <button class="card-btn">Agregar al carrito</button>
-          </div>
-        </div>
-
-
   </section>
 
       <section id="novedades">
-        <h2>Novedades</h2>
-        <p>Nuevos lanzamientos, Descuentos y mas!!!</p>
-      </section>
+  <h2>Novedades</h2>
+  <div id="novedades-container" class="novedades-api-container"></div>
+</section>
 
   <section id="reseñas">
     <h2>Reseñas</h2>
@@ -202,10 +134,19 @@
         <li><a href="#">Discord</a></li>
       </ul>
     </div>
-  </div>
   <p class="footer-copy">&copy; 2026 nOOb. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="productos.js"></script>
+    <div id="carrito-panel">
+  <h3>Tu carrito</h3>
+  <ul id="carrito-items"></ul>
+  <p id="carrito-total-label">Total: <span id="carrito-total">$0</span></p>
+  <button id="btn-vaciar">Vaciar carrito</button>
+</div>
+
+<script src="Juegos.js"></script>
+<script src="productos.js"></script>
+<script src="carrito.js"></script>
+<script src="novedades.js"></script>
   </body>
 </html>
